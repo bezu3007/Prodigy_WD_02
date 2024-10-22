@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link href="../dist/output.css" rel="stylesheet"> <!-- Linking the compiled Tailwind CSS -->
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+    <!-- Stopwatch Container -->
+    <div class="bg-white rounded-lg shadow-lg p-8 text-center max-w-sm w-full">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Stopwatch</h1>
+
+        <!-- Stopwatch Display -->
+        <div class="text-4xl font-mono text-gray-900 mb-8">
+            <span id="minutes">00</span>:<span id="seconds">00</span>:<span id="milliseconds">00</span>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="flex justify-center space-x-4">
+            <button id="start-pause-btn" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg focus:outline-none">
+                Start
+            </button>
+            <button id="lap-reset-btn" class="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-lg focus:outline-none" disabled>
+                Lap
+            </button>
+        </div>
+
+        <!-- Laps List -->
+        <ul id="laps" class="mt-6 text-left text-gray-700"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
